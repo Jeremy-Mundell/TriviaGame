@@ -123,69 +123,8 @@ var questionsArray = [{
 
 	done: function() {
 
-// Answer check formula...repeated for each question to check for right & wrong answers.
 
-    // $.each($("input[name='question-0']:checked"), function() {
-    //   if ($(this).val() == questionsArray[0].correctAnswer) {
-    //     game.correct++;
-    //   } else {
-    //     game.wrong++;
-    //   }
-    // });
-    // $.each($("input[name='question-1']:checked"), function() {
-    //     if ($(this).val() == questionsArray[1].correctAnswer) {
-    //     game.correct++;
-    //   } else {
-    //     game.wrong++;
-    //   }
-    // });
-    // $.each($("input[name='question-2']:checked"), function() {
-    //   if ($(this).val() == questionsArray[2].correctAnswer) {
-    //     game.correct++;
-    //   } else {
-    //     game.wrong++;
-    //   }
-    // });
-    // $.each($("input[name='question-3']:checked"), function() {
-    //   if ($(this).val() == questionsArray[3].correctAnswer) {
-    //     game.correct++;
-    //   } else {
-    //     game.wrong++;
-    //   }
-    // });
-    // $.each($("input[name='question-4']:checked"), function() {
-    //   if ($(this).val() == questionsArray[4].correctAnswer) {
-    //     game.correct++;
-    //   } else {
-    //     game.wrong++;
-    //   }
-    // });
-    // $.each($("input[name='question-5']:checked"), function() {
-    //   if ($(this).val() == questionsArray[5].correctAnswer) {
-    //     game.correct++;
-    //   } else {
-    //     game.wrong++;
-    //   }
-    // });
-    // $.each($("input[name='question-6']:checked"), function() {
-    //   if ($(this).val() == questionsArray[6].correctAnswer) {
-    //     game.correct++;
-    //   } else {
-    //     game.wrong++;
-    //   }
-    // });
-    // $.each($("input[name='question-7']:checked"), function() {
-    //   if ($(this).val() == questionsArray[7].correctAnswer) {
-    //     game.correct++;
-    //   } else {
-    //     game.wrong++;
-    //   }
-
-    //   console.log(done);
-    // });
-
-// ISSUE - Cannot get the DONE button to work and appear at the bottom of the page to activate the results function.
-    panel.append('<button id="done">Done</button>');
+    // panel.append('<button id="done">Done</button>');
 
     // this.result();
   },
@@ -204,7 +143,7 @@ var questionsArray = [{
 
 };
 
-//functions
+
 
 
 
