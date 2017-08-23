@@ -90,18 +90,30 @@ var questionsArray = [{
 
   	// Timer function. Counts down
 
+ // function stop() {
+
+ //      //  Clears our intervalId
+ //      //  We just pass the name of the interval
+ //      //  to the clearInterval function.
+ //      clearInterval(intervalId);
+ //    }
+
   	countdown: function(){
     game.counter--;
     $('#counter-number').html(game.counter);
 
-    if (game.counter === 0){
+    if (game.counter === 0){ // clearInterval(intervalId);
+    
       alert('TIME IS UP!');
       game.done();
     }
   },
 
+
+
+
   	// after pressing start. Game page appends with questions and timer starts
-    startGame: function() {
+    startGame: function()  {
     	timer = setInterval(game.countdown, 1000);
 
     	$('#sub-wrap').prepend('<h2>Remaining Time: <span id="counter-number">60</span> Seconds</h2>');
@@ -114,34 +126,19 @@ var questionsArray = [{
     		}
 		}
 
-	},
+},
 
-
-
-
-
-
-	done: function() {
-
-
-    // panel.append('<button id="done">Done</button>');
-
-    // this.result();
-  },
-
-  // RESULTS function to display right and wrong answers.
-
-    result: function() {
+// stop the timer and check the questions......
+done: function() {
 
     clearInterval(timer);
-
-    $('#subwrapper h2').remove();
-    panel.html('<h2>All Done!</h2>');
-    panel.append('<h3>Correct Answers: ' + this.correct + '</h3>');
-    panel.append('<h3>Wrong Answers: ' + this.wrong + '</h3>');
   }
 
-};
+};  
+
+  
+
+ 
 
 
 
