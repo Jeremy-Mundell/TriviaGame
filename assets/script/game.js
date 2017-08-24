@@ -12,6 +12,8 @@ var questionsArray = [{
   answers: ["Stephen King", "George R.R. Martin", "George Orwell", "George Elliot"],
   
   correctAnswer: 1
+
+ 
 }, {
 
   question: "What is the name of the Onion Knight?",
@@ -76,27 +78,21 @@ var questionsArray = [{
 
 }]
 
-
+  console.log(questionsArray.question);
 
 	var game = {
 
     // Game Variables
 
     questions: questionsArray,  
-    questionNum: 0,
+
     correct: 0,
-   	wrong: 0,
+    question: 0,
+    wrong: 0,
+    answers: 0,
     counter:60,
 
-  	// Timer function. Counts down
 
- // function stop() {
-
- //      //  Clears our intervalId
- //      //  We just pass the name of the interval
- //      //  to the clearInterval function.
- //      clearInterval(intervalId);
- //    }
 
   	countdown: function(){
     game.counter--;
@@ -118,7 +114,9 @@ var questionsArray = [{
 
     	$('#sub-wrap').prepend('<h2>Remaining Time: <span id="counter-number">60</span> Seconds</h2>');
     	$('#start').remove();
+
     	$('#question_div').append("<h1>GO!</h1>");
+
     	for (var i = 0; i < questionsArray.length; i++) {
     		$('#question_div').append('<h2>' + questionsArray[i].question + '</h2>');
     		for (var t = 0; t < 4; t++) {
@@ -128,11 +126,26 @@ var questionsArray = [{
 
 },
 
+
 // stop the timer and check the questions......
 done: function() {
-
     clearInterval(timer);
-  }
+    if (questionsArray.question.answers === questionsArray.correctAnswer) {
+     correct += 1;
+    } else {
+      wrong += 1;
+    }
+
+html = "You got " + correctAnswer + "questions right" ;
+print(html);
+
+html = "You got " + wrong + "questions wrong" ;
+print(html);
+
+ }
+
+
+
 
 };  
 
