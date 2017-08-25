@@ -6,6 +6,12 @@ $(document).on('click', '#start', function(event) {
 });
 
 
+//game global variables
+  
+    var question = 0;
+    var score = 0;
+    var answer = 0;
+
 var questionsArray = [{
 
   question: "What is the name of Best-Selling author of Game of Thrones?",
@@ -78,18 +84,12 @@ var questionsArray = [{
 
 }]
 
-  console.log(questionsArray.question);
+  // console.log(questionsArray.question);
 
 	var game = {
 
-    // Game Variables
-
+  
     questions: questionsArray,  
-
-    correct: 0,
-    question: 0,
-    wrong: 0,
-    answers: 0,
     counter:60,
 
 
@@ -135,6 +135,8 @@ done: function() {
     } else {
       wrong += 1;
     }
+
+    answer = questions[counter].answers;
 
 html = "You got " + correctAnswer + "questions right" ;
 print(html);
