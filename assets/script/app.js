@@ -120,9 +120,18 @@ var questionsArray = [{
     	for (var i = 0; i < questionsArray.length; i++) {
     		$('#question_div').append('<h2>' + questionsArray[i].question + '</h2>');
     		for (var t = 0; t < 4; t++) {
-    			$('#question_div').append('<input type="radio" name="answers'+i+'">' + questionsArray[i].answers[t] );
+    			$('#question_div').append('<input type="radio" name="answers'+i+'">' + questionsArray[i].answers[t]);
+
     		}
 		}
+    //added submit button. did not use jquery.
+    var button = document.createElement("button");
+    button.innerHTML = "Submit";
+    var body = document.getElementsByTagName("body")[0];
+    body.appendChild(button);
+    button.addEventListener("click", function() {
+      alert("clicked!")
+    });
 
 },
 
@@ -138,11 +147,11 @@ done: function() {
 
     answer = questions[counter].answers;
 
-html = "You got " + correctAnswer + "questions right" ;
-print(html);
+    html = "You got " + correctAnswer + "questions right" ;
+    print(html);
 
-html = "You got " + wrong + "questions wrong" ;
-print(html);
+    html = "You got " + wrong + "questions wrong" ;
+    print(html);
 
  }
 
